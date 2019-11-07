@@ -10,6 +10,16 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return "[" + id + " - " + (ciphertext.isEmpty() ? "cifrar  " : "decifrar") + " - " + mode + " - " + key + " - " + ciphertext + plaintext + "]";
+        return id + " - " + (ciphertext.isEmpty() ? "cifrar  " : "decifrar") + " - " + mode + " - " + key + " - "
+                + ciphertext + plaintext;
     }
+
+    public boolean IsOperacaoCifrar() {
+        return !plaintext.isEmpty();
+    }
+
+    public boolean IsOperacaoDecifrar() {
+        return !ciphertext.isEmpty();
+    }
+
 }
